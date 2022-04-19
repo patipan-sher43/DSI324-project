@@ -1,0 +1,32 @@
+{% extends "base_student.html" %} {% block title %}My Curriculum{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="leftcolumn" style="margin-top: 0.5cm; margin-bottom: 0.5cm;">
+            <h6 style="padding-top: 20px;">เลือกภาคการศึกษาที่ต้องการตรวจสอบ</h6>
+            <form action="#">
+                <label for="lang">ภาคการศึกษา</label>
+                <select name="academic-year" id="acdm">
+                  <option value="y1s1">1/2562</option>
+                  <option value="y1s2">2/2562</option>
+                  <option value="y2s1">1/2563</option>
+                  <option value="y2s2">2/2563</option>
+                  <option value="y3s1">1/2564</option>
+                  <option value="y3s2">2/2564</option>
+                  <option value="y4s1">1/2565</option>
+                  <option value="y4s2">2/2565</option>
+                </select>
+                <button class="button button1">ค้นหา</button>
+            </form>
+        </div>
+        <div class="rightcolumn" style="vertical-align: center;">
+            <div class="card card1">
+                <h2 style="margin: 4px 6px;">ข้อมูลการลงทะเบียนเรียนในภาคการศึกษาที่ ...</h2>
+                
+            </div>
+            <br />
+        </div> 
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{{ if sem_result != {} }}
+<table>
+    <tr>
+        <th>วิชาเรียน</th>
+        <th>ชื่อวิชา</th>
+        <th>กลุ่มเรียน</th>
+        <th>จำนวนหน่วยกิต</th>
+        <th>Status</th>
+        <th>หมายเหตุ</th>
+    </tr>
+    {{ for subject in subject_list }}
+    <tr>
+        <td>{{ subject }}</td>
+        <td>...</td>
+        <td>{{ sem_result['section'] }}</td>
+        <td>3</td>
+        <td>ผ่าน</td>
+        <td>ไม่มี</td>
+    </tr>
+    {{ endfor }}
+</table>
+<h5>วันที่ลงทะเบียน : {{ sem_result['timestamp'] }}</h5>
+{{ else }}
+<h4>No result found!!</h4>
+{{ endif }}

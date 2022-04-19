@@ -1,0 +1,29 @@
+<!-- {% extends "base.html" %} 
+
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container h-100" id="form-wrapper">
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+            <div class="d-flex justify-content-center form_container">
+                <form method="POST" id="login-page" style="background-color: white;">
+                    <h3 align="center">Login</h3>
+                    <div class="form-group">
+                        <label for="email">Username</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    <br />
+                    <div class="d-flex justify-content-center mt-3 login_container">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+</div></div></div></div>
+{% endblock %} -->
+
+
+<a class="nav-item nav-link" id="login" href="/login"></a>
