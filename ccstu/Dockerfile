@@ -19,4 +19,4 @@ COPY main.py main.py
 RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
-CMD ["python3","-u","flask", "main.py"]
+CMD ["python3","-u", "main.py"]
