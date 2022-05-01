@@ -14,8 +14,8 @@ RUN apt-get -y install apt-utils \
     python3-pip \
     python3-numpy \
     python3-pandas
-COPY requirements.txt requirements.txt
-COPY main.py main.py
+COPY requirements.txt /code/requirements.txt
+COPY main.py /code/main.py
 RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
