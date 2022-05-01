@@ -16,7 +16,7 @@ RUN apt-get -y install apt-utils \
     python3-pandas
 COPY requirements.txt /code/requirements.txt
 COPY main.py /code/main.py
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 EXPOSE 5000
 COPY . .
 CMD ["python3","-u", "main.py"]
