@@ -15,7 +15,7 @@ CIS-Curriculum Checking System
   - <code>sudo apt-get upgrade</code>
   - <code>sudo apt-get install docker.io</code>
 ในส่วนนี้ ผู้ใช้จะต้องทำการสร้าง group ใหม่ที่ชื่อ docker ก่อน เพื่อการเรียกใช้งานที่สะดวก ดังนี้
-  - สร้าง <code>docker<code> group
+  - สร้าง <code>docker</code> group
     <code>sudo groupadd docker</code>
   - เพิ่ม user ของคุณไปยัง <code>docker</code>
     <code>sudo usermod -aG docker $USER</code>
