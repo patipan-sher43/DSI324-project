@@ -2,7 +2,6 @@
 FROM debian:10.3-slim
 WORKDIR /code
 ENV FLASK_APP=main.py
-ENV FLASK_RUN_HOST=0.0.0.0
 
 RUN apt-get update && apt-get -y dist-upgrade
 
