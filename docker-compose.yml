@@ -20,6 +20,8 @@ services:
       - POSTGRES_USER=patipan_sher43
       - POSTGRES_PASSWORD=ccs_tu2022
       - POSTGRES_DB=ccs
+    ports:
+      - 5432:5432
       
 volumes:
   postgres_data:
