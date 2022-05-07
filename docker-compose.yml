@@ -19,7 +19,7 @@ services:
     environment:
       - POSTGRES_USER=patipan_sher43
       - POSTGRES_PASSWORD=ccs_tu2022
-      - POSTGRES_DB=CCS
+      - POSTGRES_DB=ccs
       
 volumes:
   postgres_data:
