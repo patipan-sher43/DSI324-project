@@ -2,4 +2,3 @@ flask
 Flask-SQLAlchemy
 google_auth_oauthlib
 requests
-psycopg2-binary
