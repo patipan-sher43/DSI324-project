@@ -8,8 +8,6 @@ from os import path
 import datetime
 import pandas as pd
 
-# DATABASE_URL = 'postgresql://patipan_sher43:ccs_tu2022@db:5432/ccs'
-
 db = SQLAlchemy()
 DB_NAME = "CCS.db"
 
@@ -18,7 +16,6 @@ def create_app():
     api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite://{DATABASE_URL}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
