@@ -1,5 +1,0 @@
-flask
-Flask-SQLAlchemy
-google_auth_oauthlib
-requests
-Flask-MySQLdb
