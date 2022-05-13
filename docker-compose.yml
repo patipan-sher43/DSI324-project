@@ -3,21 +3,23 @@ services:
   web:
     build: ./web/.
     ports:
-      - 5000:5000
+      - "5000:5000"
     volumes:
       - ./web/.:/code
     environment:
       FLASK_ENV: development
+    links:
+      - mysql 
   redis:
     image: "redis:alpine"
 
   mysql:
     build:
-        context: ./mysql
-        args:
-            - MYSQL_DATABASE=${MYSQL_DATABASE}
-            - MYSQL_USER=${MYSQL_USER}
-            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      context: ./mysql
+      args:
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     ports:
         - "${MYSQL_PORT}:3306"
