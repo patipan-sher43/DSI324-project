@@ -3,8 +3,8 @@
 
 from flask import Flask
 from flask_mysqldb import MySQL, MySQLdb
-from flask_restful import Api, Resource
-from flask_cors import CORS
+#from flask_restful import Api, Resource
+#from flask_cors import CORS
 from os import path
 import datetime
 import pandas as pd
@@ -17,9 +17,9 @@ import pandas as pd
 
 def create_app():
     app = Flask(__name__)
-    api = Api(app)
+    #api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
-    app.config['MYSQL_HOST'] = 'localhost'
+    app.config['MYSQL_HOST'] = 'mysql'
     app.config['MYSQL_USER'] = 'root'
     app.config['MYSQL_PASSWORD'] = 'ccstu_2022'
     app.config['MYSQL_DB'] = 'curriculum_dataset'
@@ -29,7 +29,7 @@ def create_app():
     # db.init_app(app)
     global mysql
     mysql = MySQL(app)
-    CORS(app)
+    #CORS(app)
 
     from .views import views
     from .auth import auth
