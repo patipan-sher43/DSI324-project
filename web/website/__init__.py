@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 from flask_mysqldb import MySQL, MySQLdb
 from flask_restful import Api, Resource
 from flask_cors import CORS
@@ -22,7 +21,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'DSI324-project'
     app.config['MYSQL_HOST'] = 'localhost'
     app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = 'fordzaa55'
+    app.config['MYSQL_PASSWORD'] = 'ccstu_2022'
     app.config['MYSQL_DB'] = 'curriculum_dataset'
     # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite://{DATABASE_URL}'
