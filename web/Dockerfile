@@ -4,6 +4,7 @@ WORKDIR /code
 ENV FLASK_APP=main.py
 
 RUN apt-get update && apt-get -y dist-upgrade
+RUN apt-get install -y default-libmysqlclient-dev
 
 RUN apt-get -y install apt-utils \
     build-essential \
