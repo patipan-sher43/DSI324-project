@@ -4,7 +4,7 @@ from . import db
 from datetime import datetime
 
 class Programs(db.Model):
-    __tablename__ = 'programs'
+    #__tablename__ = 'programs'
     program_id = db.Column(db.String(3), primary_key=True)
     program_nameEN = db.Column(db.String(200))
     program_nameTH = db.Column(db.String(200))
@@ -17,7 +17,7 @@ class Programs(db.Model):
     # curri_format = db.relationship("Curriculum_format")  ## One to Many
 
 class Student(db.Model):
-    __tablename__ = 'student'
+    #__tablename__ = 'student'
     student_id = db.Column(db.String(10), primary_key=True)
     program_id = db.Column(db.String(3), db.ForeignKey('programs.program_id'))
     student_nameEN = db.Column(db.String(255))
@@ -31,7 +31,7 @@ class Student(db.Model):
     # registrations = db.relationship("Registrations")  ## One to Many
 
 class Curriculum_format(db.Model):
-    __tablename__ = 'curriculum_format'
+    #__tablename__ = 'curriculum_format'
     curriculum_formatID = db.Column(db.String(3), primary_key=True)
     program_id = db.Column(db.String(3), db.ForeignKey('programs.program_id'))
     subject_id = db.Column(db.String(500))
@@ -41,7 +41,7 @@ class Curriculum_format(db.Model):
 
 
 class Subject_type(db.Model):
-    __tablename__ = 'subject_type'
+    #__tablename__ = 'subject_type'
     subject_type_id = db.Column(db.Integer, primary_key=True)
     subject_type_name = db.Column(db.String(100))
     sub_type_name = db.Column(db.String(100))
@@ -49,7 +49,7 @@ class Subject_type(db.Model):
     # subjects_all = db.relationship("Subjects")  ## One to Many
 
 class Subjects(db.Model):
-    __tablename__ = 'subjects'
+    #__tablename__ = 'subjects'
     subject_id = db.Column(db.String(6), primary_key=True)
     subject_type_id = db.Column(db.Integer, db.ForeignKey('subject_type.subject_type_id'))
     subject_name = db.Column(db.String(255))
@@ -58,7 +58,7 @@ class Subjects(db.Model):
     prerequisite_id = db.Column(db.String(20))
 
 class Registrations(db.Model):
-    __tablename__ = 'registrations'
+    #__tablename__ = 'registrations'
     registration_id = db.Column(db.String(10), primary_key=True)
     student_id = db.Column(db.String(10))
     subject_id = db.Column(db.String(100))
@@ -71,7 +71,7 @@ class Registrations(db.Model):
     # student = db.relationship("Student")  ## One to One
 
 class Academic_result(db.Model):
-    __tablename__ = 'academic_result'
+    #__tablename__ = 'academic_result'
     academic_result_id = db.Column(db.String(10), primary_key=True)
     registration_id = db.Column(db.String(10), db.ForeignKey('registrations.registration_id'))
     grade_result = db.Column(db.String())
@@ -79,7 +79,7 @@ class Academic_result(db.Model):
     # registration = db.relationship("Registrations")
 
 class User(db.Model):
-    __tablename__ = 'user'
+    #__tablename__ = 'user'
     user_id = db.Column(db.String(7), primary_key=True)
     program_id = db.Column(db.String(3), db.ForeignKey('programs.program_id'))
     nameTH = db.Column(db.String(255))
