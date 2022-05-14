@@ -4,8 +4,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mysqldb import MySQL
-from flask_restful import Api, Resource
-from flask_cors import CORS
+# from flask_restful import Api, Resource
+# from flask_cors import CORS
 from os import path
 import datetime
 import pandas as pd
@@ -20,16 +20,16 @@ def create_app():
     app = Flask(__name__)
     api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
-    app.config['MYSQL_HOST'] = 'localhost'
-    app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = 'fordzaa55'
-    app.config['MYSQL_DB'] = 'curriculum_dataset'
-    # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    #app.config['MYSQL_HOST'] = 'localhost'
+    #app.config['MYSQL_USER'] = 'root'
+    #app.config['MYSQL_PASSWORD'] = 'fordzaa55'
+    #app.config['MYSQL_DB'] = 'curriculum_dataset'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite://{DATABASE_URL}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # db.init_app(app)
-    mysql = MySQL(app)
-    CORS(app)
+    # mysql = MySQL(app)
+    # CORS(app)
 
     from .views import views
     from .auth import auth
@@ -38,16 +38,16 @@ def create_app():
     app.register_blueprint(auth, url_prefix='/')
 
     # create_database(app)
-    add_data(app, mysql)
+    add_data(app)
 
-    return app, mysql
+    return app
 
 def create_database(app):
     if not path.exists('website/'+ DB_NAME):
         db.create_all(app=app)
         print('Created Database!')
 
-def add_data(app, mysql):
+def add_data(app):
     from .models import Programs, Subjects, Subject_type, Curriculum_format, Registrations
     with app.app_context():
         ### Programs
