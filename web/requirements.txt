@@ -1,0 +1,5 @@
+flask
+mysql-connector
+google_auth_oauthlib
+requests
+Flask-MySQLdb
