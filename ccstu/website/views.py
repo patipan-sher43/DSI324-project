@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 from flask import Blueprint, render_template, request, flash, redirect, url_for, session, abort, jsonify
 from .auth import login_is_required
-from main import mysql
+# from main import mysql
 import ast
 from .models import *
 from . import db
