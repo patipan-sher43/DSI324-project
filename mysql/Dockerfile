@@ -1,18 +1,5 @@
-FROM mysql:5.7
-RUN chown -R mysql:root /var/lib/mysql/
+FROM mysql/mysql-server:5.5.62
+ENV MYSQL_ROOT_PASSWORD=ccstu_2022
 
-ARG MYSQL_DATABASE
-ARG MYSQL_USER
-ARG MYSQL_PASSWORD
-ARG MYSQL_ROOT_PASSWORD
-
-ENV MYSQL_DATABASE=$MYSQL_DATABASE
-ENV MYSQL_USER=$MYSQL_USER
-ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
-ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
-
-ADD Data.sql /etc/mysql/Data.sql
-RUN sed -i 's/MYSQL_DATABASE/'$MYSQL_DATABASE'/g' /etc/mysql/Data.sql
-RUN cp /etc/mysql/Data.sql /docker-entrypoint-initdb.d
-
-EXPOSE 3306
+COPY ./Data.sql /home/Data.sql
+COPY ./db_custom_init.sh /docker-entrypoint-initdb.d/
