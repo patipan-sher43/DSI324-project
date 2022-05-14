@@ -1,4 +1,0 @@
-flask
-google_auth_oauthlib
-requests
-Flask-MySQLdb
