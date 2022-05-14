@@ -1,10 +1,10 @@
 version: "3.7"
 services:
   web:
-    build: ./web/.
+    build: ./ccstu/.
     ports:
       - "5000:5000"
     volumes:
-      - ./web/.:/code
+      - ./ccstu/.:/code
     environment:
       FLASK_ENV: development
