@@ -14,12 +14,12 @@ services:
     image: "redis:alpine"
 
   mysql:
-    build:
-      context: ./mysql
-      args:
-        - MYSQL_DATABASE=${MYSQL_DATABASE}
-        - MYSQL_USER=${MYSQL_USER}
-        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    ports:
-        - "${MYSQL_PORT}:3306"
+      build:
+          context: ./mysql
+          args:
+              - MYSQL_DATABASE=${MYSQL_DATABASE}
+              - MYSQL_USER=${MYSQL_USER}
+              - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+              - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      ports:
+          - "${MYSQL_PORT}:3306"
