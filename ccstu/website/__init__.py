@@ -3,7 +3,7 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_mysqldb import MySQL
+# from flask_mysqldb import MySQL
 # from flask_restful import Api, Resource
 # from flask_cors import CORS
 from os import path
@@ -18,7 +18,7 @@ DB_NAME = "CCS.db"
 
 def create_app():
     app = Flask(__name__)
-    api = Api(app)
+    # api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
     #app.config['MYSQL_HOST'] = 'localhost'
     #app.config['MYSQL_USER'] = 'root'
@@ -27,7 +27,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite://{DATABASE_URL}'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    # db.init_app(app)
+    db.init_app(app)
     # mysql = MySQL(app)
     # CORS(app)
 
