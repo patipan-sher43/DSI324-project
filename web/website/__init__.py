@@ -20,7 +20,7 @@ def create_app():
     #api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
     app.config['MYSQL_HOST'] = 'mysql'
-    app.config['MYSQL_USER'] = 'root'
+    app.config['MYSQL_USER'] = 'adminccs'
     app.config['MYSQL_PASSWORD'] = 'ccstu_2022'
     app.config['MYSQL_DB'] = 'curriculum_dataset'
     # app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
