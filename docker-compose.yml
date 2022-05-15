@@ -17,6 +17,6 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: fordzaa55
-      MYSQL_DATABASE: curriculum_dataset
+      MYSQL_DB: curriculum_dataset
     volumes:
-      - ./Data.sql:/docker-entrypoint-initdb.d/Data.sql
+      - ./Data.sql:/docker-entrypoint-initdb.d/:ro
