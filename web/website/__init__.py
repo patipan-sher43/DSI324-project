@@ -19,7 +19,7 @@ def create_app():
     app = Flask(__name__)
     # api = Api(app)
     app.config['SECRET_KEY'] = 'DSI324-project'
-    app.config['MYSQL_HOST'] = 'localhost'
+    app.config['MYSQL_HOST'] = 'mysql'
     app.config['MYSQL_USER'] = 'root'
     app.config['MYSQL_PASSWORD'] = 'fordzaa55'
     app.config['MYSQL_DB'] = 'curriculum_dataset'
