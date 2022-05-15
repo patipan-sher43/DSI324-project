@@ -22,7 +22,7 @@ client_secrets_file = os.path.join(pathlib.Path(__file__).parent, "client_secret
 flow = Flow.from_client_secrets_file(
     client_secrets_file=client_secrets_file,
     scopes=["https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/userinfo.email", "openid"],
-    redirect_uri="http://ccs-tu.eastus.cloudapp.azure.com/callback")
+    redirect_uri="https://ccs-tu.azurewebsites.net/callback")
 
 
 def login_is_required(function):
