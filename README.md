@@ -39,7 +39,7 @@
 3. การนำไฟล์ Github มาใช้และ Deploy
 
     ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
-แล้วทำการนำไฟล์ Github เข้าสู่ Virtual Machine โดยใช้ <code>git clone \<Your Github Link\></code> เมื่อนำเข้าแล้ว ใช้คำสั่ง <code>cd \<Your Project Name\></code> เพื่อเข้าไปยัง Reposity ของ Github ที่ได้สร้างไว้
+แล้วทำการนำไฟล์ Github เข้าสู่ Virtual Machine โดยใช้ <code>git clone \<Your Github Link\></code> เมื่อนำเข้าแล้ว ใช้คำสั่ง <code>cd \<Your Project Name\></code> เพื่อเข้าไปยัง Repository ของ Github ที่ได้สร้างไว้
 จากนั้นใช้คำสั่ง <code>docker-compose up</code> เพื่อทำการ Deploy ตัวเว็บไซต์ต่อไป
   
     ในการรัน <code>docker-compose up</code> <b>จะต้องรัน 2 ครั้ง</b> ครั้งแรกเป็นการเรียกเพื่อสร้าง Database โดยใช้คำสั่ง <code>docker-compose up --build</code> เมื่อสร้างแล้ว จึงทำการสิ้นสุดการทำงานโดยใช้คำสั่ง <code>CTRL + C</code> ส่วนครั้งที่ 2 จะเป็นการเรียกใช้ Web โดยใช้คำสั่ง <code>docker-compose up</code> แบบปกติ
