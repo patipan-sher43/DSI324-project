@@ -1,7 +1,7 @@
 # คู่มือการใช้งาน CIS-Curriculum Checking System
 
 สำหรับผู้ที่ต้องการจะนำไปใช้ ขอให้ศึกษารายละเอียดการใช้งานดังต่อไปนี้
-1. ส่วนประกอบใน directory
+#### 1. ส่วนประกอบใน directory
 
     1.1 โฟลเดอร์ web ประกอบด้วย
       - ไฟล์ main.py ซึ่งเป็นไฟล์หลักในการรันงาน
@@ -14,7 +14,7 @@
   
     1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
-2. การรัน Project เบื้องต้น
+#### 2. การรัน Project เบื้องต้น
 
     สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
       - <code>sudo apt-get update</code>
@@ -30,7 +30,7 @@
       - ทดสอบการใช้ <code>docker</code>
         <code>docker run hello-world</code>
   
-3. การนำไฟล์ Github มาใช้และ Deploy
+#### 3. การนำไฟล์ Github มาใช้และ Deploy
 
     ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
 แล้วทำการนำไฟล์ Github เข้าสู่ Virtual Machine โดยใช้ <code>git clone <Your Github Link></code> เมื่อนำเข้าแล้ว ใช้คำสั่ง <code>cd <Your Project Name></code> เพื่อเข้าไปยัง Reposity ของ Github ที่ได้สร้างไว้
