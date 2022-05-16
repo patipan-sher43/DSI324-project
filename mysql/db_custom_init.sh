@@ -1,2 +1,2 @@
-mysql -u root -p$MYSQL_ROOT_PASSWORD -e 'create database curriculum_dataset'
-mysql -u root -p$MYSQL_ROOT_PASSWORD curriculum_dataset < /home/Data.sql
+mysql -u root -p fordzaa55 -e 'create database curriculum_dataset'
+mysql -u root -p fordzaa55 curriculum_dataset < /home/Data.sql
