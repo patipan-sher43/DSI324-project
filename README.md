@@ -15,6 +15,12 @@
     1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
 2. การรัน Project เบื้องต้น
+    
+    2.1 การรันบน localhost
+    
+        ผู้ใช้สามารถทำการรันคำสั่ง <code>git clone \<link from GitHub\></code> เพื่อทำการดึงมาใส่ในโฟลเดอร์ของผู้ใช้ได้ และทำการกดรันหน้า <code>main.py</code> ได้เลย ซึ่งในที่นี้ขอแนะนำให้ใช้โปรแกรม Visual Studio Code ในการรัน
+        
+    2.2 การรันบน Azure Virtual Machine (โดยใช้ Windows Powershell)
 
     สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
       - <code>sudo apt-get update</code>
