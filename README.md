@@ -15,7 +15,8 @@
     1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
 2. การรัน Project เบื้องต้น
-สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
+
+    สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
       - <code>sudo apt-get update</code>
       - <code>sudo apt-get upgrade</code>
       - <code>sudo apt-get install docker.io</code>
@@ -30,7 +31,8 @@
         <code>docker run hello-world</code>
   
 3. การนำไฟล์ Github มาใช้และ Deploy
-ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
+
+    ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
 แล้วทำการนำไฟล์ Github เข้าสู่ Virtual Machine โดยใช้ <code>git clone <Your Github Link></code> เมื่อนำเข้าแล้ว ใช้คำสั่ง <code>cd <Your Project Name></code> เพื่อเข้าไปยัง Reposity ของ Github ที่ได้สร้างไว้
 จากนั้นใช้คำสั่ง <code>docker-compose up</code> เพื่อทำการ Deploy ตัวเว็บไซต์ต่อไป
   
