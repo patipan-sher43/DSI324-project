@@ -1,20 +1,20 @@
 # คู่มือการใช้งาน CIS-Curriculum Checking System
 
 สำหรับผู้ที่ต้องการจะนำไปใช้ ขอให้ศึกษารายละเอียดการใช้งานดังต่อไปนี้
-<b>1. ส่วนประกอบใน directory</b>
+1. ส่วนประกอบใน directory
 
     1.1 โฟลเดอร์ web ประกอบด้วย
-      - ไฟล์ main.py ซึ่งเป็นไฟล์หลักในการรันงาน
-      - Dockerfile สำหรับการเซ็ต Container
-      - requirements.txt สำหรับการติดตั้ง Library ที่จำเป็นต่อการใช้งาน
-      - subjects_text.csv และ curriculum_format-DSI.csv ใช้สำหรับการะนำเข้าข้อมูลรายวิชาและแผนการเรียนลงใน Database
+      - ไฟล์ <code>main.py</code> ซึ่งเป็นไฟล์หลักในการรันงาน
+      - <code>Dockerfile</code> สำหรับการเซ็ต Container
+      - <code>requirements.txt</code> สำหรับการติดตั้ง Library ที่จำเป็นต่อการใช้งาน
+      - <code>subjects_text.csv</code> และ <code>curriculum_format-DSI.csv</code> ใช้สำหรับการะนำเข้าข้อมูลรายวิชาและแผนการเรียนลงใน Database
       - โฟลเดอร์ website จะรวบรวมไฟล์ที่ใช้รันหน้าเว็บต่างๆ รวมถึงการทำ authentication และมี templates ที่รวบรวมหน้าเว็บทุกหน้าที่เกี่ยวข้องกับระบบ และ static ที่เก็บรูปภาพต่างๆ
 
-    1.2 โฟลเดอร์ mysql ซึ่งเก็บไฟล์ script ในการสร้าง Database ชื่อ curriculum_dataset และ db_custom_init.sh ในการเรียกใช้ไฟล์ script ไปสร้างใน docker container
+    1.2 โฟลเดอร์ mysql ซึ่งเก็บไฟล์ script ในการสร้าง Database ชื่อ <code>curriculum_dataset</code> และ <code>db_custom_init.sh</code> ในการเรียกใช้ไฟล์ script ไปสร้างใน docker container
   
     1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
-<b>2. การรัน Project เบื้องต้น</b>
+2. การรัน Project เบื้องต้น
 
     สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
       - <code>sudo apt-get update</code>
@@ -30,7 +30,7 @@
       - ทดสอบการใช้ <code>docker</code>
         <code>docker run hello-world</code>
   
-<b>3. การนำไฟล์ Github มาใช้และ Deploy</b>
+3. การนำไฟล์ Github มาใช้และ Deploy
 
     ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
 แล้วทำการนำไฟล์ Github เข้าสู่ Virtual Machine โดยใช้ <code>git clone <Your Github Link></code> เมื่อนำเข้าแล้ว ใช้คำสั่ง <code>cd <Your Project Name></code> เพื่อเข้าไปยัง Reposity ของ Github ที่ได้สร้างไว้
