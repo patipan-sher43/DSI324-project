@@ -8,9 +8,9 @@
       - <code>Dockerfile</code> สำหรับการเซ็ต Container
       - <code>requirements.txt</code> สำหรับการติดตั้ง Library ที่จำเป็นต่อการใช้งาน
       - <code>subjects_text.csv</code> และ <code>curriculum_format-DSI.csv</code> ใช้สำหรับการนำเข้าข้อมูลรายวิชาและแผนการเรียนลงใน Database
-      - โฟลเดอร์ website จะรวบรวมไฟล์ที่ใช้รันหน้าเว็บต่างๆ รวมถึงการทำ authentication และมี templates ที่รวบรวมหน้าเว็บทุกหน้าที่เกี่ยวข้องกับระบบ และ static ที่เก็บรูปภาพต่างๆ
+      - โฟลเดอร์ website จะรวบรวมไฟล์ที่ใช้รันหน้าเว็บต่างๆ รวมถึงการทำ Authentication และมี templates ที่รวบรวมหน้าเว็บทุกหน้าที่เกี่ยวข้องกับระบบ และ static ที่เก็บรูปภาพต่างๆ
 
-    1.2 โฟลเดอร์ mysql ซึ่งเก็บไฟล์ script ในการสร้าง Database ชื่อ <code>curriculum_dataset</code> และ <code>db_custom_init.sh</code> ในการเรียกใช้ไฟล์ script ไปสร้างใน docker container
+    1.2 โฟลเดอร์ mysql ซึ่งเก็บไฟล์ script ในการสร้าง Database ชื่อ <code>curriculum_dataset</code> และ <code>db_custom_init.sh</code> ในการเรียกใช้ไฟล์ script ไปสร้างใน Docker container
   
     1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
