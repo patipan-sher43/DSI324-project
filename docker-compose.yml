@@ -2,21 +2,26 @@ version: "3.7"
 services:
   web:
     build: ./web/.
+    links:
+      - mysql
     ports:
       - "5000:5000"
     volumes:
       - ./web/.:/code
     environment:
       FLASK_ENV: development
-    links:
-      - mysql 
       
   mysql:
-    image: mysql:5.7
+    image: mariadb:10.3
+    container_name: mysql-container
     ports:
-      - "3306:3306"
+      - 3306:3306
+    volumes:
+      - container-volume:/var/lib/mysql
+      - ./mysql/Data.sql:/docker-entrypoint-initdb.d/Data.sql
     environment:
       MYSQL_ROOT_PASSWORD: fordzaa55
-      MYSQL_DB: curriculum_dataset
-    volumes:
-      - ./Data.sql:/docker-entrypoint-initdb.d/:ro
+      # MYSQL_DB: curriculum_dataset
+
+volumes:
+    container-volume:
