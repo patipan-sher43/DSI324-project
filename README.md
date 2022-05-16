@@ -18,7 +18,7 @@
     
     2.1 การรันบน localhost
     
-        ผู้ใช้สามารถทำการรันคำสั่ง <code>git clone \<link from GitHub\></code> เพื่อทำการดึงมาใส่ในโฟลเดอร์ของผู้ใช้ได้ และทำการกดรันหน้า <code>main.py</code> ได้เลย ซึ่งในที่นี้ขอแนะนำให้ใช้โปรแกรม Visual Studio Code ในการรัน
+      ผู้ใช้สามารถทำการรันคำสั่ง <code>git clone \<link from GitHub\></code> เพื่อทำการดึงมาใส่ในโฟลเดอร์ของผู้ใช้ได้ และทำการกดรันหน้า <code>main.py</code> ได้เลย ซึ่งในที่นี้ขอแนะนำให้ใช้โปรแกรม Visual Studio Code ในการรัน
         
     2.2 การรันบน Azure Virtual Machine (โดยใช้ Windows Powershell)
 
