@@ -1,6 +1,5 @@
-# คู่มือการใช้งาน
-## CIS-Curriculum Checking System
-คู่มือการติดตั้ง <br>
+# คู่มือการใช้งาน CIS-Curriculum Checking System
+
 สำหรับผู้ที่ต้องการจะนำไปใช้ ขอให้ศึกษารายละเอียดการใช้งานดังต่อไปนี้
 1. ส่วนประกอบใน directory
 
@@ -17,18 +16,18 @@
 
 2. การรัน Project เบื้องต้น
 สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
-  - <code>sudo apt-get update</code>
-  - <code>sudo apt-get upgrade</code>
-  - <code>sudo apt-get install docker.io</code>
-ในส่วนนี้ ผู้ใช้จะต้องทำการสร้าง group ใหม่ที่ชื่อ docker ก่อน เพื่อการเรียกใช้งานที่สะดวก ดังนี้
-  - สร้าง <code>docker</code> group
-    <code>sudo groupadd docker</code>
-  - เพิ่ม user ของคุณไปยัง <code>docker</code>
-    <code>sudo usermod -aG docker $USER</code>
-  - Activate ตัว group
-    <code>newgrp docker</code>
-  - ทดสอบการใช้ <code>docker</code>
-    <code>docker run hello-world</code>
+      - <code>sudo apt-get update</code>
+      - <code>sudo apt-get upgrade</code>
+      - <code>sudo apt-get install docker.io</code>
+    ในส่วนนี้ ผู้ใช้จะต้องทำการสร้าง group ใหม่ที่ชื่อ docker ก่อน เพื่อการเรียกใช้งานที่สะดวก ดังนี้
+      - สร้าง <code>docker</code> group
+        <code>sudo groupadd docker</code>
+      - เพิ่ม user ของคุณไปยัง <code>docker</code>
+        <code>sudo usermod -aG docker $USER</code>
+      - Activate ตัว group
+        <code>newgrp docker</code>
+      - ทดสอบการใช้ <code>docker</code>
+        <code>docker run hello-world</code>
   
 3. การนำไฟล์ Github มาใช้และ Deploy
 ก่อนการ Deploy จะต้องติดตั้ง <code>docker-compose</code> ลงบน Virtual Machine ของตน โดยใช้ <code>sudo apt-get install docker-compose</code>
