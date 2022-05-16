@@ -9,7 +9,9 @@
   - requirements.txt สำหรับการติดตั้ง Library ที่จำเป็นต่อการใช้งาน
   - subjects_text.csv และ curriculum_format-DSI.csv ใช้สำหรับการะนำเข้าข้อมูลรายวิชาและแผนการเรียนลงใน Database
   - โฟลเดอร์ website จะรวบรวมไฟล์ที่ใช้รันหน้าเว็บต่างๆ รวมถึงการทำ authentication และมี templates ที่รวบรวมหน้าเว็บทุกหน้าที่เกี่ยวข้องกับระบบ และ static ที่เก็บรูปภาพต่างๆ
+
   1.2 โฟลเดอร์ mysql ซึ่งเก็บไฟล์ script ในการสร้าง Database ชื่อ curriculum_dataset และ db_custom_init.sh ในการเรียกใช้ไฟล์ script ไปสร้างใน docker container
+  
   1.3 <code>docker-compose.yml</code> เป็นไฟล์ในการ Deploy ตัว web และ Database (mysql) ขึ้นสู่ Services
 
 2. การรัน Project เบื้องต้น
