@@ -22,7 +22,7 @@
         
     2.2 การรันบน Azure Virtual Machine (โดยใช้ Windows Powershell)
 
-    สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
+    สำหรับการรันเบื้องต้น จะใช้ Azure Virtual Machine มาช่วยในการ Deploy เว็บเป็น Public โดยจะต้องสร้าง Virtual Machine และทำการเข้าระบบโดยใช้ SSH จากนั้นทำการรันโค้ดดังต่อไปนี้
       - <code>sudo apt-get update</code>
       - <code>sudo apt-get upgrade</code>
       - <code>sudo apt-get install docker.io</code>
