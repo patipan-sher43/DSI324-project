@@ -1,7 +1,7 @@
-# คู่มือการใช้งาน CIS-Curriculum Checking System
+# คู่มือการติดตั้ง CIS-Curriculum Checking System
 
 สำหรับผู้ที่ต้องการจะนำไปใช้ ขอให้ศึกษารายละเอียดการใช้งานดังต่อไปนี้
-1. ส่วนประกอบใน directory
+1. ส่วนประกอบใน Directory ซึ่งจะใช้ Branch <code>main</code> ในการอัปเดตไฟล์เป็นหลัก
 
     1.1 โฟลเดอร์ web ประกอบด้วย
       - ไฟล์ <code>main.py</code> ซึ่งเป็นไฟล์หลักในการรันงาน
